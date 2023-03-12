@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-1790,1210,700,1000",
+    "LastPlacement": "78,1158,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -12943,7 +12943,7 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia(if(changed(3000, [APRDashPlugin.Standings.Columns.Position.Width]), 0, [APRDashPlugin.Standings.Columns.Position.Width]),3000)\r\n\r\n\r\n\r\n"
+                        "Expression": "inertia( [APRDashPlugin.Standings.Columns.Position.Width],50)\r\n\r\n\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
@@ -12954,6 +12954,13 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Visible"
+                    },
+                    "Opacity": {
+                      "Formula": {
+                        "Expression": "inertia( if([APRDashPlugin.Standings.Columns.Position.Width]>0,100,0),50)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Opacity"
                     }
                   }
                 },

@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-1816,1184,700,1000",
+    "LastPlacement": "-1868,1132,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -12943,17 +12943,10 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia(if(changed(3000, [APRDashPlugin.Standings.Columns.Position.Width]), [APRDashPlugin.Standings.Columns.Position.Width], [APRDashPlugin.Standings.Columns.Position.Width]),1)\r\n\r\n\r\n\r\n"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.Position.Visible],[APRDashPlugin.Standings.Columns.Position.Width],0),100)\r\n\r\n\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
-                    },
-                    "Visible": {
-                      "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Visible]"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -13000,12 +12993,12 @@
                       "Mode": 2,
                       "TargetPropertyName": "Left"
                     },
-                    "Visible": {
+                    "Width": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Visible]"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Width],0),100)\r\n"
                       },
                       "Mode": 2,
-                      "TargetPropertyName": "Visible"
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },

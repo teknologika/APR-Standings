@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "faaf442a-66bd-4175-ad1c-a27853bb7981",
+  "Id": "588ab1a6-c1b0-4723-a51e-f225d58f7d8f",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -13164,7 +13164,7 @@
                     "Text": {
                       "FormatString": "0.0",
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'0.0',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
+                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'-',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Text"
@@ -13291,14 +13291,16 @@
                     },
                     "BackgroundColor": {
                       "Formula": {
-                        "Expression": "prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer') ? [APRDashPlugin.Standings.Colours.BackgroundDriverHighlight] :\r\nif( repeatindex() % 2, [APRDashPlugin.Standings.Colours.BackgroundAlternate], [APRDashPlugin.Standings.Colours.Background])\r\n"
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundDriverHighlight'));\r\n}\r\n\r\nelse if($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == $prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLap')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\nelse if (repeatindex() % 2) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundAlternate'));\r\n}\r\nelse {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
                     },
                     "TextColor": {
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Purple',if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Green','White'))"
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLap') == '0') {\r\nreturn 'White';\r\n}\r\n\r\n\r\nif($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == $prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLap')) {\r\n\tif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\t\treturn 'purple';\r\n\t}\r\n\telse {\r\n\t\treturn 'green';\r\n\t}\r\n}\r\n\t\r\nreturn 'white';\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"
@@ -13485,6 +13487,57 @@
             "Width": {
               "Formula": {
                 "Expression": "inertia(if([APRDashPlugin.Standings.Columns.GapToCarInFront.Visible],[APRDashPlugin.Standings.Columns.GapToCarInFront.Width],0),100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Width"
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Montserrat",
+          "FontWeight": "SemiBold",
+          "TextPadding": {
+            "PaddingLeft": 5
+          },
+          "FontSize": 14.0,
+          "Text": "Gap",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 0,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#FFFF0000",
+          "Height": 25.0,
+          "Left": 312.0,
+          "Top": 75.0,
+          "Visible": true,
+          "Width": 80.0,
+          "Name": "Interval Label2",
+          "Bindings": {
+            "BackgroundColor": {
+              "Formula": {
+                "Expression": "[APRDashPlugin.Standings.Colours.Background]\r\n"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "BackgroundColor"
+            },
+            "Visible": {
+              "Formula": {
+                "Expression": "repeatindex() <= [APRDashPlugin.Standings.NumberOfCarsInSession]\r\n"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Visible"
+            },
+            "Left": {
+              "Formula": {
+                "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Left],100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Left"
+            },
+            "Width": {
+              "Formula": {
+                "Expression": "inertia(if([APRDashPlugin.Standings.Columns.GapToLeader.Visible],[APRDashPlugin.Standings.Columns.GapToLeader.Width],0),100)"
               },
               "Mode": 2,
               "TargetPropertyName": "Width"

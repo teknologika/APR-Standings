@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "8b3a41cf-0779-4d3c-a6bd-9c46aadf1b37",
+  "Id": "5098d382-acdf-4e3e-8b88-ead58d344ae2",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -12933,6 +12933,27 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia(if(changed(3000, [APRDashPlugin.Standings.Columns.Position.Width]), [APRDashPlugin.Standings.Columns.Position.Width], [APRDashPlugin.Standings.Columns.Position.Width]),200000)\r\n\r\n\r\n\r\n"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -12971,6 +12992,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },

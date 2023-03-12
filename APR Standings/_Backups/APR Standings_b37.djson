@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-1868,1132,700,1000",
+    "LastPlacement": "-1340,1153,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -12988,7 +12988,7 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Left],0),100)\r\n"
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.CarNumber.Left],100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
@@ -13039,10 +13039,17 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.DriverName.Left]"
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.DriverName.Left],100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.DriverName.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },
@@ -13116,6 +13123,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },
@@ -13161,6 +13182,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToCarInFront.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToCarInFront.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },

@@ -1,10 +1,10 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "78,1158,700,1000",
+    "LastPlacement": "-1868,1132,700,1000",
     "Maximized": false
   },
   "Version": 2,
-  "Id": "5098d382-acdf-4e3e-8b88-ead58d344ae2",
+  "Id": "c3eca83b-c23e-441e-adcf-081d7b537061",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -12947,20 +12947,6 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
-                    },
-                    "Visible": {
-                      "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Visible]"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Visible"
-                    },
-                    "Opacity": {
-                      "Formula": {
-                        "Expression": "inertia( if([APRDashPlugin.Standings.Columns.Position.Width]>0,100,0),50)"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Opacity"
                     }
                   }
                 },
@@ -13002,17 +12988,17 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.CarNumber.Left],100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
                     },
-                    "Visible": {
+                    "Width": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Visible]"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Width],0),100)\r\n"
                       },
                       "Mode": 2,
-                      "TargetPropertyName": "Visible"
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },
@@ -13050,6 +13036,13 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.DriverName.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
                     }
                   }
                 },

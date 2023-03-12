@@ -1,10 +1,10 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-1868,1132,700,1000",
+    "LastPlacement": "-1340,1153,700,1000",
     "Maximized": false
   },
   "Version": 2,
-  "Id": "5098d382-acdf-4e3e-8b88-ead58d344ae2",
+  "Id": "c3eca83b-c23e-441e-adcf-081d7b537061",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -12988,7 +12988,7 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.CarNumber.Left],100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
@@ -13036,6 +13036,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.DriverName.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.DriverName.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },

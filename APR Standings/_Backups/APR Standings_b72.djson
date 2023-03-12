@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "8c91dd7e-ad61-463a-9158-e36939542f58",
+  "Id": "4e17fee6-60e4-402a-a1d9-0dfd75e5bbc7",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -12933,6 +12933,27 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Width]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -12971,6 +12992,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -13106,7 +13141,7 @@
                   "Name": "GapToCarAhead",
                   "Bindings": {
                     "Text": {
-                      "FormatString": "+0.0",
+                      "FormatString": "+0.00",
                       "Formula": {
                         "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
                       },
@@ -13160,14 +13195,16 @@
                     },
                     "BackgroundColor": {
                       "Formula": {
-                        "Expression": "prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer') ? [APRDashPlugin.Standings.Colours.BackgroundDriverHighlight] :\r\nif( repeatindex() % 2,if (prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.BestLap') =0,[APRDashPlugin.Standings.Colours.Background],[APRDashPlugin.Standings.Colours.Background]), [APRDashPlugin.Standings.Colours.Background])\r\n\r\n\r\n\r\n"
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundDriverHighlight'));\r\n}\r\nelse if($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\nelse if (repeatindex() % 2) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundAlternate'));\r\n}\r\nelse {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
                     },
                     "TextColor": {
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest'),'Purple','White')\r\n\r\n"
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == '-:--.---') {\r\nreturn 'White';\r\n}\r\n\r\nif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn 'purple';\r\n}\r\nelse {\r\n\treturn 'White';\r\n}"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"

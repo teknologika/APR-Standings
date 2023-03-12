@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "8b3a41cf-0779-4d3c-a6bd-9c46aadf1b37",
+  "Id": "5098d382-acdf-4e3e-8b88-ead58d344ae2",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -12933,6 +12933,27 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia(if(changed(3000, [APRDashPlugin.Standings.Columns.Position.Width]), 100, 0),100)\r\n\r\n"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -12971,6 +12992,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -13160,14 +13195,16 @@
                     },
                     "BackgroundColor": {
                       "Formula": {
-                        "Expression": "prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer') ? [APRDashPlugin.Standings.Colours.BackgroundDriverHighlight] :\r\nif( repeatindex() % 2, [APRDashPlugin.Standings.Colours.BackgroundAlternate], [APRDashPlugin.Standings.Colours.Background])\r\n"
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundDriverHighlight'));\r\n}\r\nelse if($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\nelse if (repeatindex() % 2) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundAlternate'));\r\n}\r\nelse {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
                     },
                     "TextColor": {
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest'),'Purple','White')\r\n\r\n"
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == '-:--.---') {\r\nreturn 'White';\r\n}\r\n\r\nif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn 'purple';\r\n}\r\nelse {\r\n\treturn 'White';\r\n}"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"

@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-1790,1210,700,1000",
+    "LastPlacement": "-1861,1169,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -12943,7 +12943,7 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia(if(changed(3000, [APRDashPlugin.Standings.Columns.Position.Width]), 100, 0),100)\r\n\r\n"
+                        "Expression": "inertia( [APRDashPlugin.Standings.Columns.Position.Width],100)\r\n\r\n\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
