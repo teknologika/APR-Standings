@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "8b3a41cf-0779-4d3c-a6bd-9c46aadf1b37",
+  "Id": "4e17fee6-60e4-402a-a1d9-0dfd75e5bbc7",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -12933,6 +12933,27 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Width]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -12971,6 +12992,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Visible]"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },

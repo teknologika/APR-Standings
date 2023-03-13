@@ -13299,7 +13299,8 @@
                     },
                     "TextColor": {
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Purple',if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Green','White'))"
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == '-:--.---') {\r\nreturn 'White';\r\n}\r\n\r\nif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn 'purple';\r\n}\r\n\r\nif($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == $prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLap')) {\r\n\treturn 'green';\r\n}\r\n\r\nreturn 'white';\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"

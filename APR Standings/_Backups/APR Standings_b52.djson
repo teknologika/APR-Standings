@@ -12947,13 +12947,6 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
-                    },
-                    "Opacity": {
-                      "Formula": {
-                        "Expression": "inertia( if([APRDashPlugin.Standings.Columns.Position.Width]>0,100,0),50)"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Opacity"
                     }
                   }
                 },
@@ -13000,12 +12993,12 @@
                       "Mode": 2,
                       "TargetPropertyName": "Left"
                     },
-                    "Visible": {
+                    "Width": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Visible]"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Width],0),100)\r\n"
                       },
                       "Mode": 2,
-                      "TargetPropertyName": "Visible"
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },

@@ -12988,14 +12988,14 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "\r\ninertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Left],[APRDashPlugin.Standings.Columns.CarNumber.Left]),100)"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Left],[APRDashPlugin.Standings.Columns.CarNumber.Left]),100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Width],0),100)\r\n"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Width],[APRDashPlugin.Standings.Columns.CarNumber.Width]),100)\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"

@@ -12943,7 +12943,7 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia(if(changed(3000, [APRDashPlugin.Standings.Columns.Position.Width]), 0, [APRDashPlugin.Standings.Columns.Position.Width]),100)\r\n\r\n"
+                        "Expression": "inertia(if(changed(10000, [APRDashPlugin.Standings.Columns.Position.Width]), 0, [APRDashPlugin.Standings.Columns.Position.Width]),1000)\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"

@@ -13123,6 +13123,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },
@@ -13168,6 +13182,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToCarInFront.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToCarInFront.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },

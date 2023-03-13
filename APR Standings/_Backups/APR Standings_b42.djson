@@ -12988,7 +12988,7 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.CarNumber.Left],100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
@@ -13039,10 +13039,17 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.DriverName.Left]"
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.DriverName.Left],100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.DriverName.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },

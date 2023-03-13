@@ -13161,7 +13161,7 @@
                     "BackgroundColor": {
                       "Formula": {
                         "Interpreter": 1,
-                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundDriverHighlight'));\r\n}\r\nelse if (repeatindex() % 2) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundAlternate'));\r\n}\r\nelse {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\n\r\n"
+                        "Expression": "\r\n\r\n\r\n\r\nif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundDriverHighlight'));\r\n}\r\nelse if( $prop('APRDashPlugin.Standings.Overall.Position01.BestLapIsOverallBest')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\nelse if (repeatindex() % 2) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundAlternate'));\r\n}\r\nelse {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
@@ -13169,7 +13169,7 @@
                     "TextColor": {
                       "Formula": {
                         "Interpreter": 1,
-                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn 'purple';\r\n}\r\nelse {\r\n\treturn 'White';\r\n}"
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == '-:--.---') {\r\nreturn 'White';\r\n}\r\n\r\nif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn 'purple';\r\n}\r\nelse {\r\n\treturn 'White';\r\n}"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"

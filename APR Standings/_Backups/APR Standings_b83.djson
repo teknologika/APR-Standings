@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "8c91dd7e-ad61-463a-9158-e36939542f58",
+  "Id": "8b3a41cf-0779-4d3c-a6bd-9c46aadf1b37",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -13106,7 +13106,7 @@
                   "Name": "GapToCarAhead",
                   "Bindings": {
                     "Text": {
-                      "FormatString": "+0.0",
+                      "FormatString": "+0.00",
                       "Formula": {
                         "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
                       },
@@ -13160,7 +13160,7 @@
                     },
                     "BackgroundColor": {
                       "Formula": {
-                        "Expression": "prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer') ? [APRDashPlugin.Standings.Colours.BackgroundDriverHighlight] :\r\nif( repeatindex() % 2,if (prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.BestLap') =0,[APRDashPlugin.Standings.Colours.Background],[APRDashPlugin.Standings.Colours.Background]), [APRDashPlugin.Standings.Colours.Background])\r\n\r\n\r\n\r\n"
+                        "Expression": "prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer') ? [APRDashPlugin.Standings.Colours.BackgroundDriverHighlight] :\r\nif( repeatindex() % 2, [APRDashPlugin.Standings.Colours.BackgroundAlternate], [APRDashPlugin.Standings.Colours.Background])\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"

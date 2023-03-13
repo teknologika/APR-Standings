@@ -12862,7 +12862,7 @@
           "Repetitions": 30.0,
           "RepeatTopOffset": 25.0,
           "Height": 25.0,
-          "Width": 530.0,
+          "Width": 520.0,
           "BackgroundColor": "#00FFFFFF",
           "Childrens": [
             {
@@ -12871,7 +12871,7 @@
               "Left": 0.0,
               "RepeatTopOffset": 0.0,
               "Height": 25.0,
-              "Width": 530.0,
+              "Width": 520.0,
               "BackgroundColor": "#00FFFFFF",
               "Childrens": [
                 {
@@ -13214,9 +13214,9 @@
                   "VerticalAlignment": 1,
                   "BackgroundColor": "#FF40E0D0",
                   "Height": 25.0,
-                  "Left": 370.0,
+                  "Left": 440.0,
                   "Top": 100.0,
-                  "Visible": true,
+                  "Visible": false,
                   "Width": 80.0,
                   "Name": "FastestLap",
                   "Bindings": {
@@ -13257,6 +13257,13 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.FastestLap.Visible]\r\n"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
                     }
                   }
                 },
@@ -13275,9 +13282,9 @@
                   "VerticalAlignment": 1,
                   "BackgroundColor": "#FF008000",
                   "Height": 25.0,
-                  "Left": 450.0,
+                  "Left": 360.0,
                   "Top": 100.0,
-                  "Visible": false,
+                  "Visible": true,
                   "Width": 80.0,
                   "Name": "LastLap",
                   "Bindings": {
@@ -13353,7 +13360,7 @@
           "VerticalAlignment": 1,
           "BackgroundColor": "#FFFF0000",
           "Height": 25.0,
-          "Left": 370.0,
+          "Left": 440.0,
           "Top": 75.0,
           "Visible": true,
           "Width": 80.0,
@@ -13404,7 +13411,7 @@
           "VerticalAlignment": 1,
           "BackgroundColor": "#00FFFFFF",
           "Height": 25.0,
-          "Left": 450.0,
+          "Left": 360.0,
           "Top": 75.0,
           "Visible": true,
           "Width": 80.0,

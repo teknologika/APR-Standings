@@ -13110,9 +13110,9 @@
                   "Name": "GapToLeader",
                   "Bindings": {
                     "Text": {
-                      "FormatString": "+0.000",
+                      "FormatString": "0.0",
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToLeader')==0,'',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToLeader'))"
+                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToLeader')==0,'-',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToLeader'))"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Text"
@@ -13162,9 +13162,9 @@
                   "Name": "GapToCarAhead",
                   "Bindings": {
                     "Text": {
-                      "FormatString": "+0.00",
+                      "FormatString": "0.0",
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
+                        "Expression": "if((format(repeatindex(),'00') == '00'),\r\n\r\nif(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')),\r\n\r\n0.0)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Text"

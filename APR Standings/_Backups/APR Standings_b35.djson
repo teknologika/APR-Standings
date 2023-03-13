@@ -13133,7 +13133,7 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Width],100)"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.GapToLeader.Visible],[APRDashPlugin.Standings.Columns.GapToLeader.Width],0),100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
@@ -13192,7 +13192,7 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToCarInFront.Width],100)"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.GapToCarInFront.Visible],[APRDashPlugin.Standings.Columns.GapToCarInFront.Width],0),100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"

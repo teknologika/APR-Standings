@@ -12988,7 +12988,7 @@
                     },
                     "Left": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.CarNumber.Left]"
+                        "Expression": "\r\ninertia(if([APRDashPlugin.Standings.Columns.CarNumber.Visible],[APRDashPlugin.Standings.Columns.CarNumber.Left],[APRDashPlugin.Standings.Columns.CarNumber.Left]),100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Left"

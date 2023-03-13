@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-1868,1132,700,1000",
+    "LastPlacement": "-1340,1153,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -13123,6 +13123,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "BackgroundColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Width],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 },

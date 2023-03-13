@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "c3eca83b-c23e-441e-adcf-081d7b537061",
+  "Id": "64f718ec-9777-4add-b06b-e5353a086f0e",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -13133,7 +13133,7 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Width],100)"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.GapToLeader.Visible],[APRDashPlugin.Standings.Columns.GapToLeader.Width],0),100)"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"

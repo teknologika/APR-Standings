@@ -1,10 +1,10 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "260,1340,700,1000",
+    "LastPlacement": "26,1106,700,1000",
     "Maximized": false
   },
   "Version": 2,
-  "Id": "7e246097-185d-45c9-a304-cc2f3e61c728",
+  "Id": "991807b3-09f8-4880-ad21-fff2f09e8430",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -13275,7 +13275,7 @@
                   "Height": 25.0,
                   "Left": 360.0,
                   "Top": 100.0,
-                  "Visible": false,
+                  "Visible": true,
                   "Width": 80.0,
                   "Name": "FastestLap",
                   "Bindings": {

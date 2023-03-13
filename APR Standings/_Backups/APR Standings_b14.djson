@@ -13164,7 +13164,7 @@
                     "Text": {
                       "FormatString": "0.0",
                       "Formula": {
-                        "Expression": "if((format(repeatindex(),'00') == '00'),\r\n\r\nif(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'-',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')),'0.0')"
+                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'-',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Text"
@@ -13485,6 +13485,57 @@
             "Width": {
               "Formula": {
                 "Expression": "inertia(if([APRDashPlugin.Standings.Columns.GapToCarInFront.Visible],[APRDashPlugin.Standings.Columns.GapToCarInFront.Width],0),100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Width"
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Montserrat",
+          "FontWeight": "SemiBold",
+          "TextPadding": {
+            "PaddingLeft": 5
+          },
+          "FontSize": 14.0,
+          "Text": "Interval",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 0,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#FFFF0000",
+          "Height": 25.0,
+          "Left": 312.0,
+          "Top": 75.0,
+          "Visible": true,
+          "Width": 80.0,
+          "Name": "Interval Label2",
+          "Bindings": {
+            "BackgroundColor": {
+              "Formula": {
+                "Expression": "[APRDashPlugin.Standings.Colours.Background]\r\n"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "BackgroundColor"
+            },
+            "Visible": {
+              "Formula": {
+                "Expression": "repeatindex() <= [APRDashPlugin.Standings.NumberOfCarsInSession]\r\n"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Visible"
+            },
+            "Left": {
+              "Formula": {
+                "Expression": "inertia([APRDashPlugin.Standings.Columns.GapToLeader.Left],100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Left"
+            },
+            "Width": {
+              "Formula": {
+                "Expression": "inertia(if([APRDashPlugin.Standings.Columns.GapToLeader.Visible],[APRDashPlugin.Standings.Columns.GapToLeader.Width],0),100)"
               },
               "Mode": 2,
               "TargetPropertyName": "Width"

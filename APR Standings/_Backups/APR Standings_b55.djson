@@ -12943,17 +12943,10 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "inertia( [APRDashPlugin.Standings.Columns.Position.Width],50)\r\n\r\n\r\n\r\n"
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.Position.Visible],[APRDashPlugin.Standings.Columns.Position.Width],0),100)\r\n\r\n\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
-                    },
-                    "Visible": {
-                      "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Visible]"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Visible"
                     },
                     "Opacity": {
                       "Formula": {

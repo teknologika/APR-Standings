@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "588ab1a6-c1b0-4723-a51e-f225d58f7d8f",
+  "Id": "d17d3dae-ca59-4ef4-98b7-5a7240814280",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -13110,9 +13110,10 @@
                   "Name": "GapToLeader",
                   "Bindings": {
                     "Text": {
-                      "FormatString": "0.0",
+                      "FormatString": "",
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToLeader')==0,'-',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToLeader'))"
+                        "Interpreter": 1,
+                        "Expression": "var GapToLeader = $prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToLeader');\r\nvar LapsBehindLeader = $prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.LapsBehindLeader');\r\n\r\nif ( LapsBehindLeader > 0) {\r\n\treturn LapsBehindLeader +'L'; \r\n}\r\n\r\nif( GapToLeader == 0) {\t\r\n\treturn '-';\r\n}\r\n\r\nif ( GapToLeader >= 10 ) {\r\n\treturn format(GapToLeader,'0');\r\n}\r\nelse {\r\n\treturn format(GapToLeader,'0.0');\r\n}"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Text"
@@ -13162,9 +13163,10 @@
                   "Name": "GapToCarAhead",
                   "Bindings": {
                     "Text": {
-                      "FormatString": "0.0",
+                      "FormatString": "",
                       "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'-',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
+                        "Interpreter": 1,
+                        "Expression": "var GapToCarAhead = $prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead');\r\nvar LapsBehindLeader = $prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.LapsBehindLeader');\r\n\r\nif ( LapsBehindLeader > 0) {\r\n\treturn LapsBehindLeader +'L'; \r\n}\r\n\r\nif( GapToCarAhead == 0) {\t\r\n\treturn '-';\r\n}\r\n\r\nif ( GapToCarAhead >= 10 ) {\r\n\treturn format(GapToCarAhead,'0');\r\n}\r\nelse {\r\n\treturn format(GapToCarAhead,'0.0');\r\n}"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Text"

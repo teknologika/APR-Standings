@@ -13207,67 +13207,6 @@
                   "TextPadding": {
                     "PaddingLeft": 5
                   },
-                  "FontSize": 14.0,
-                  "Text": "02:03.085",
-                  "TextColor": "#FFFFFFFF",
-                  "HorizontalAlignment": 0,
-                  "VerticalAlignment": 1,
-                  "BackgroundColor": "#FF40E0D0",
-                  "Height": 25.0,
-                  "Left": 440.0,
-                  "Top": 100.0,
-                  "Visible": true,
-                  "Width": 80.0,
-                  "Name": "FastestLap",
-                  "Bindings": {
-                    "Text": {
-                      "FormatString": "m\\:ss\\.fff",
-                      "Formula": {
-                        "Expression": "if (prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.BestLap') =0,'-:--.---',secondstotimespan(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.BestLap')))"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Text"
-                    },
-                    "BackgroundColor": {
-                      "Formula": {
-                        "Interpreter": 1,
-                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundDriverHighlight'));\r\n}\r\nelse if($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\nelse if (repeatindex() % 2) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundAlternate'));\r\n}\r\nelse {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\n\r\n"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "BackgroundColor"
-                    },
-                    "TextColor": {
-                      "Formula": {
-                        "Interpreter": 1,
-                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == '-:--.---') {\r\nreturn 'White';\r\n}\r\n\r\nif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn 'purple';\r\n}\r\nelse {\r\n\treturn 'White';\r\n}"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "TextColor"
-                    },
-                    "Width": {
-                      "Formula": {
-                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.FastestLap.Visible],[APRDashPlugin.Standings.Columns.FastestLap.Width],0),100)"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Width"
-                    },
-                    "Left": {
-                      "Formula": {
-                        "Expression": "inertia([APRDashPlugin.Standings.Columns.FastestLap.Left],100)"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Left"
-                    }
-                  }
-                },
-                {
-                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-                  "IsTextItem": true,
-                  "Font": "Montserrat",
-                  "FontWeight": "SemiBold",
-                  "TextPadding": {
-                    "PaddingLeft": 5
-                  },
                   "FontSize": 13.0,
                   "Text": "01:13.326",
                   "TextColor": "#FFFFFFFF",
@@ -13275,7 +13214,7 @@
                   "VerticalAlignment": 1,
                   "BackgroundColor": "#FF008000",
                   "Height": 25.0,
-                  "Left": 360.0,
+                  "Left": 440.0,
                   "Top": 100.0,
                   "Visible": true,
                   "Width": 80.0,
@@ -13318,6 +13257,74 @@
                       "TargetPropertyName": "Width"
                     }
                   }
+                },
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "Montserrat",
+                  "FontWeight": "SemiBold",
+                  "TextPadding": {
+                    "PaddingLeft": 5
+                  },
+                  "FontSize": 14.0,
+                  "Text": "02:03.085",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 0,
+                  "VerticalAlignment": 1,
+                  "BackgroundColor": "#FF40E0D0",
+                  "Height": 25.0,
+                  "Left": 360.0,
+                  "Top": 100.0,
+                  "Visible": false,
+                  "Width": 80.0,
+                  "Name": "FastestLap",
+                  "Bindings": {
+                    "Text": {
+                      "FormatString": "m\\:ss\\.fff",
+                      "Formula": {
+                        "Expression": "if (prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.BestLap') =0,'-:--.---',secondstotimespan(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.BestLap')))"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Text"
+                    },
+                    "BackgroundColor": {
+                      "Formula": {
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundDriverHighlight'));\r\n}\r\nelse if($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\nelse if (repeatindex() % 2) {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.BackgroundAlternate'));\r\n}\r\nelse {\r\n\treturn ($prop('APRDashPlugin.Standings.Colours.Background'));\r\n}\r\n\r\n"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "BackgroundColor"
+                    },
+                    "TextColor": {
+                      "Formula": {
+                        "Interpreter": 1,
+                        "Expression": "if ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLap') == '-:--.---') {\r\nreturn 'White';\r\n}\r\n\r\nif ($prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.BestLapIsOverallBest')) {\r\n\treturn 'purple';\r\n}\r\nelse {\r\n\treturn 'White';\r\n}"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "TextColor"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.FastestLap.Visible],[APRDashPlugin.Standings.Columns.FastestLap.Width],0),100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.FastestLap.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Visible": {
+                      "Formula": {
+                        "Expression": "[APRDashPlugin.Standings.Columns.FastestLap.Visible]\r\n"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Visible"
+                    }
+                  }
                 }
               ],
               "Group": false,
@@ -13347,64 +13354,13 @@
             "PaddingLeft": 5
           },
           "FontSize": 14.0,
-          "Text": "Fastest",
-          "TextColor": "#FFFFFFFF",
-          "HorizontalAlignment": 0,
-          "VerticalAlignment": 1,
-          "BackgroundColor": "#FFFF0000",
-          "Height": 25.0,
-          "Left": 440.0,
-          "Top": 75.0,
-          "Visible": true,
-          "Width": 80.0,
-          "Name": "FastestLapLabel",
-          "Bindings": {
-            "BackgroundColor": {
-              "Formula": {
-                "Expression": "[APRDashPlugin.Standings.Colours.Background]\r\n"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "BackgroundColor"
-            },
-            "Visible": {
-              "Formula": {
-                "Expression": "repeatindex() <= [APRDashPlugin.Standings.NumberOfCarsInSession]\r\nand\r\nprop('APRDashPlugin.Standings.Overall.Position00.Number') > 0"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "Visible"
-            },
-            "Left": {
-              "Formula": {
-                "Expression": "inertia([APRDashPlugin.Standings.Columns.FastestLap.Left],100)"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "Left"
-            },
-            "Width": {
-              "Formula": {
-                "Expression": "inertia(if([APRDashPlugin.Standings.Columns.FastestLap.Visible],[APRDashPlugin.Standings.Columns.FastestLap.Width],0),100)"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "Width"
-            }
-          }
-        },
-        {
-          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-          "IsTextItem": true,
-          "Font": "Montserrat",
-          "FontWeight": "SemiBold",
-          "TextPadding": {
-            "PaddingLeft": 5
-          },
-          "FontSize": 14.0,
           "Text": "Last",
           "TextColor": "#FFFFFFFF",
           "HorizontalAlignment": 0,
           "VerticalAlignment": 1,
           "BackgroundColor": "#00FFFFFF",
           "Height": 25.0,
-          "Left": 360.0,
+          "Left": 440.0,
           "Top": 75.0,
           "Visible": true,
           "Width": 80.0,
@@ -13434,6 +13390,57 @@
             "Width": {
               "Formula": {
                 "Expression": "inertia(if([APRDashPlugin.Standings.Columns.LastLap.Visible],[APRDashPlugin.Standings.Columns.LastLap.Width],0),100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Width"
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Montserrat",
+          "FontWeight": "SemiBold",
+          "TextPadding": {
+            "PaddingLeft": 5
+          },
+          "FontSize": 14.0,
+          "Text": "Fastest",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 0,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#FFFF0000",
+          "Height": 25.0,
+          "Left": 360.0,
+          "Top": 75.0,
+          "Visible": true,
+          "Width": 80.0,
+          "Name": "FastestLapLabel",
+          "Bindings": {
+            "BackgroundColor": {
+              "Formula": {
+                "Expression": "[APRDashPlugin.Standings.Colours.Background]\r\n"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "BackgroundColor"
+            },
+            "Visible": {
+              "Formula": {
+                "Expression": "repeatindex() <= [APRDashPlugin.Standings.NumberOfCarsInSession]\r\nand\r\nprop('APRDashPlugin.Standings.Overall.Position00.Number') > 0"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Visible"
+            },
+            "Left": {
+              "Formula": {
+                "Expression": "inertia([APRDashPlugin.Standings.Columns.FastestLap.Left],100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Left"
+            },
+            "Width": {
+              "Formula": {
+                "Expression": "inertia(if([APRDashPlugin.Standings.Columns.FastestLap.Visible],[APRDashPlugin.Standings.Columns.FastestLap.Width],0),100)"
               },
               "Mode": 2,
               "TargetPropertyName": "Width"

@@ -13164,7 +13164,7 @@
                     "Text": {
                       "FormatString": "0.0",
                       "Formula": {
-                        "Expression": "if((format(repeatindex(),'00') == '00'),\r\n\r\nif(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')),\r\n\r\n0.0)"
+                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead')==0,'0.0',prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.GapToCarAhead'))"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Text"

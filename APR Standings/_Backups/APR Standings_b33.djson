@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-899,1298,700,1000",
+    "LastPlacement": "-819,1183,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -13243,6 +13243,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.FastestLap.Visible],[APRDashPlugin.Standings.Columns.FastestLap.Width],0),100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.FastestLap.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
                     }
                   }
                 },
@@ -13288,6 +13302,20 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "TextColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.LastLap.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.LastLap.Visible],[APRDashPlugin.Standings.Columns.LastLap.Width],0),100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
                     }
                   }
                 }

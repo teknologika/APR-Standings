@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "-819,1183,700,1000",
+    "LastPlacement": "260,1340,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -13207,6 +13207,65 @@
                   "TextPadding": {
                     "PaddingLeft": 5
                   },
+                  "FontSize": 13.0,
+                  "Text": "01:13.326",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 0,
+                  "VerticalAlignment": 1,
+                  "BackgroundColor": "#FF008000",
+                  "Height": 25.0,
+                  "Left": 440.0,
+                  "Top": 100.0,
+                  "Visible": true,
+                  "Width": 80.0,
+                  "Name": "LastLap",
+                  "Bindings": {
+                    "Text": {
+                      "FormatString": "m\\:ss\\.fff",
+                      "Formula": {
+                        "Expression": "if (prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.LastLap') =0,'-:--.---',secondstotimespan(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.LastLap')))"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Text"
+                    },
+                    "BackgroundColor": {
+                      "Formula": {
+                        "Expression": "prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer') ? [APRDashPlugin.Standings.Colours.BackgroundDriverHighlight] :\r\nif( repeatindex() % 2, [APRDashPlugin.Standings.Colours.BackgroundAlternate], [APRDashPlugin.Standings.Colours.Background])\r\n"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "BackgroundColor"
+                    },
+                    "TextColor": {
+                      "Formula": {
+                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Purple',if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Green','White'))"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "TextColor"
+                    },
+                    "Left": {
+                      "Formula": {
+                        "Expression": "inertia([APRDashPlugin.Standings.Columns.LastLap.Left],100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Left"
+                    },
+                    "Width": {
+                      "Formula": {
+                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.LastLap.Visible],[APRDashPlugin.Standings.Columns.LastLap.Width],0),100)"
+                      },
+                      "Mode": 2,
+                      "TargetPropertyName": "Width"
+                    }
+                  }
+                },
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "Montserrat",
+                  "FontWeight": "SemiBold",
+                  "TextPadding": {
+                    "PaddingLeft": 5
+                  },
                   "FontSize": 14.0,
                   "Text": "02:03.085",
                   "TextColor": "#FFFFFFFF",
@@ -13214,7 +13273,7 @@
                   "VerticalAlignment": 1,
                   "BackgroundColor": "#FF40E0D0",
                   "Height": 25.0,
-                  "Left": 440.0,
+                  "Left": 360.0,
                   "Top": 100.0,
                   "Visible": false,
                   "Width": 80.0,
@@ -13266,65 +13325,6 @@
                       "TargetPropertyName": "Visible"
                     }
                   }
-                },
-                {
-                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-                  "IsTextItem": true,
-                  "Font": "Montserrat",
-                  "FontWeight": "SemiBold",
-                  "TextPadding": {
-                    "PaddingLeft": 5
-                  },
-                  "FontSize": 13.0,
-                  "Text": "01:13.326",
-                  "TextColor": "#FFFFFFFF",
-                  "HorizontalAlignment": 0,
-                  "VerticalAlignment": 1,
-                  "BackgroundColor": "#FF008000",
-                  "Height": 25.0,
-                  "Left": 360.0,
-                  "Top": 100.0,
-                  "Visible": true,
-                  "Width": 80.0,
-                  "Name": "LastLap",
-                  "Bindings": {
-                    "Text": {
-                      "FormatString": "m\\:ss\\.fff",
-                      "Formula": {
-                        "Expression": "if (prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.LastLap') =0,'-:--.---',secondstotimespan(prop('APRDashPlugin.Standings.Overall.Position'+format(repeatindex(),'00')+ '.LastLap')))"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Text"
-                    },
-                    "BackgroundColor": {
-                      "Formula": {
-                        "Expression": "prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.IsPlayer') ? [APRDashPlugin.Standings.Colours.BackgroundDriverHighlight] :\r\nif( repeatindex() % 2, [APRDashPlugin.Standings.Colours.BackgroundAlternate], [APRDashPlugin.Standings.Colours.Background])\r\n"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "BackgroundColor"
-                    },
-                    "TextColor": {
-                      "Formula": {
-                        "Expression": "if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Purple',if(prop('APRDashPlugin.Standings.Overall.Position' +format(repeatindex(),'00')+ '.LastLapIsBestLap'),'Green','White'))"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "TextColor"
-                    },
-                    "Left": {
-                      "Formula": {
-                        "Expression": "inertia([APRDashPlugin.Standings.Columns.LastLap.Left],100)"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Left"
-                    },
-                    "Width": {
-                      "Formula": {
-                        "Expression": "inertia(if([APRDashPlugin.Standings.Columns.LastLap.Visible],[APRDashPlugin.Standings.Columns.LastLap.Width],0),100)"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Width"
-                    }
-                  }
                 }
               ],
               "Group": false,
@@ -13354,64 +13354,13 @@
             "PaddingLeft": 5
           },
           "FontSize": 14.0,
-          "Text": "Fastest",
-          "TextColor": "#FFFFFFFF",
-          "HorizontalAlignment": 0,
-          "VerticalAlignment": 1,
-          "BackgroundColor": "#FFFF0000",
-          "Height": 25.0,
-          "Left": 440.0,
-          "Top": 75.0,
-          "Visible": true,
-          "Width": 80.0,
-          "Name": "FastestLapLabel",
-          "Bindings": {
-            "BackgroundColor": {
-              "Formula": {
-                "Expression": "[APRDashPlugin.Standings.Colours.Background]\r\n"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "BackgroundColor"
-            },
-            "Visible": {
-              "Formula": {
-                "Expression": "repeatindex() <= [APRDashPlugin.Standings.NumberOfCarsInSession]\r\nand\r\nprop('APRDashPlugin.Standings.Overall.Position00.Number') > 0"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "Visible"
-            },
-            "Left": {
-              "Formula": {
-                "Expression": "inertia([APRDashPlugin.Standings.Columns.FastestLap.Left],100)"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "Left"
-            },
-            "Width": {
-              "Formula": {
-                "Expression": "inertia(if([APRDashPlugin.Standings.Columns.FastestLap.Visible],[APRDashPlugin.Standings.Columns.FastestLap.Width],0),100)"
-              },
-              "Mode": 2,
-              "TargetPropertyName": "Width"
-            }
-          }
-        },
-        {
-          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-          "IsTextItem": true,
-          "Font": "Montserrat",
-          "FontWeight": "SemiBold",
-          "TextPadding": {
-            "PaddingLeft": 5
-          },
-          "FontSize": 14.0,
           "Text": "Last",
           "TextColor": "#FFFFFFFF",
           "HorizontalAlignment": 0,
           "VerticalAlignment": 1,
           "BackgroundColor": "#00FFFFFF",
           "Height": 25.0,
-          "Left": 360.0,
+          "Left": 440.0,
           "Top": 75.0,
           "Visible": true,
           "Width": 80.0,
@@ -13441,6 +13390,57 @@
             "Width": {
               "Formula": {
                 "Expression": "inertia(if([APRDashPlugin.Standings.Columns.LastLap.Visible],[APRDashPlugin.Standings.Columns.LastLap.Width],0),100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Width"
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "Montserrat",
+          "FontWeight": "SemiBold",
+          "TextPadding": {
+            "PaddingLeft": 5
+          },
+          "FontSize": 14.0,
+          "Text": "Fastest",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 0,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#FFFF0000",
+          "Height": 25.0,
+          "Left": 360.0,
+          "Top": 75.0,
+          "Visible": true,
+          "Width": 80.0,
+          "Name": "FastestLapLabel",
+          "Bindings": {
+            "BackgroundColor": {
+              "Formula": {
+                "Expression": "[APRDashPlugin.Standings.Colours.Background]\r\n"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "BackgroundColor"
+            },
+            "Visible": {
+              "Formula": {
+                "Expression": "repeatindex() <= [APRDashPlugin.Standings.NumberOfCarsInSession]\r\nand\r\nprop('APRDashPlugin.Standings.Overall.Position00.Number') > 0"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Visible"
+            },
+            "Left": {
+              "Formula": {
+                "Expression": "inertia([APRDashPlugin.Standings.Columns.FastestLap.Left],100)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Left"
+            },
+            "Width": {
+              "Formula": {
+                "Expression": "inertia(if([APRDashPlugin.Standings.Columns.FastestLap.Visible],[APRDashPlugin.Standings.Columns.FastestLap.Width],0),100)"
               },
               "Mode": 2,
               "TargetPropertyName": "Width"

@@ -1,6 +1,6 @@
 {
   "DashboardDebugManager": {
-    "LastPlacement": "78,1158,700,1000",
+    "LastPlacement": "-1868,1132,700,1000",
     "Maximized": false
   },
   "Version": 2,
@@ -12947,13 +12947,6 @@
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
-                    },
-                    "Opacity": {
-                      "Formula": {
-                        "Expression": "inertia( if([APRDashPlugin.Standings.Columns.Position.Width]>0,100,0),50)"
-                      },
-                      "Mode": 2,
-                      "TargetPropertyName": "Opacity"
                     }
                   }
                 },

@@ -4,7 +4,7 @@
     "Maximized": false
   },
   "Version": 2,
-  "Id": "4e17fee6-60e4-402a-a1d9-0dfd75e5bbc7",
+  "Id": "5098d382-acdf-4e3e-8b88-ead58d344ae2",
   "BaseHeight": 1000,
   "BaseWidth": 700,
   "BackgroundColor": "#FF000000",
@@ -12943,7 +12943,7 @@
                     },
                     "Width": {
                       "Formula": {
-                        "Expression": "[APRDashPlugin.Standings.Columns.Position.Width]"
+                        "Expression": "inertia(if(changed(3000, [APRDashPlugin.Standings.Columns.Position.Width]), 100, 0),100)\r\n\r\n"
                       },
                       "Mode": 2,
                       "TargetPropertyName": "Width"
