@@ -8,5 +8,5 @@ Simhub standings overlay designed to work when broadcasting iRacing in watch mod
 
 2. Hard link the folder containing the dash  to the SimHub directory so you can make changes and use them, while also having `git` able to see the files and their changes (example from my machine):
    
-   > mklink /J "C:\Program Files\SimHub\DashTemplates\" "C:\Users\bruce\Documents\GitHub\APR-Standings\APR Standings"
+   > mklink /J "C:\Program Files\SimHub\DashTemplates\APR Standings" "C:\Users\bruce\Documents\GitHub\APR-Standings\APR Standings"
 
